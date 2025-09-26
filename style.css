@@ -136,3 +136,18 @@ textarea{resize:vertical;min-height:140px}
   border-top:4px solid var(--brand);
 }
 .site-footer p{margin:0}
+.site-footer .phone,
+.site-footer .whatsapp {
+  color: var(--brand);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-footer .phone:hover,
+.site-footer .whatsapp:hover {
+  text-decoration: underline;
+}
+
+.site-footer .whatsapp {
+  margin-left: 6px;
+}
