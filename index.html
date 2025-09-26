@@ -1,120 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D-Fix Construction</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .service-box {
-      background: #f4f4f4;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-    }
-    form {
-      display: grid;
-      gap: 15px;
-      max-width: 500px;
-      margin: auto;
-    }
-    input, textarea, button {
-      padding: 12px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      width: 100%;
-    }
-    button {
-      background: #222;
-      color: #fff;
-      cursor: pointer;
-      border: none;
-    }
-    button:hover {
-      background: #444;
-    }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+  <title>D-Fix | Bouw & Renovatie</title>
+  <meta name="description" content="D-Fix — betrouwbaarheid in bouw en renovatie. Schilderwerken, binnenafwerking, gyproc, rioleringswerken, vloeren & tegels, dakwerken, ruwbouw, graafwerken, isolatie en klussen.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>D-Fix Construction</h1>
-    <p>Reliable. Professional. Built to Last.</p>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="branding">
+        <div class="logo">D‑Fix</div>
+        <div class="tagline" data-i18n="tagline">We fix what your husband repaired…</div>
+      </div>
+      <nav class="lang-switch" aria-label="Language switcher">
+        <button class="lang-btn active" data-lang="nl" aria-pressed="true">NL</button>
+        <span class="divider">|</span>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>D-Fix Construction is committed to delivering top-quality construction and renovation services. 
-    With years of experience and a skilled team, we bring your vision to life, on time and on budget.</p>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 data-i18n="hero_title">Betrouwbare bouw & renovatie</h1>
+        <p class="lead" data-i18n="hero_sub">Vakwerk, duidelijke planning en nette oplevering — van kleine herstellingen tot volledige projecten.</p>
+        <a href="#contact" class="btn" data-i18n="cta_contact">Vraag offerte</a>
+      </div>
+    </section>
 
-  <section>
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-box">
-        <h3>Residential Projects</h3>
-        <p>Custom homes, renovations, and remodeling designed to fit your lifestyle.</p>
+    <section class="about">
+      <div class="container">
+        <h2 data-i18n="about_title">Over ons</h2>
+        <p data-i18n="about_text">
+          D‑Fix is een veelzijdig bouwbedrijf. We combineren vakmanschap met heldere communicatie en werken steeds netjes en op tijd.
+          We helpen particulieren en bedrijven met renovaties, afwerking en duurzame herstellingen.
+        </p>
       </div>
-      <div class="service-box">
-        <h3>Commercial Construction</h3>
-        <p>Reliable construction solutions for offices, shops, and industrial facilities.</p>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2 data-i18n="services_title">Diensten</h2>
+        <ul class="service-list">
+          <li data-i18n="svc_paint">Schilderwerken</li>
+          <li data-i18n="svc_finish">Binnenafwerking</li>
+          <li data-i18n="svc_drywall">Gyprocwerken (gipsplaten)</li>
+          <li data-i18n="svc_sewer">Rioleringswerken</li>
+          <li data-i18n="svc_floor">Vloer- & tegelwerken</li>
+          <li data-i18n="svc_roof">Dakwerken</li>
+          <li data-i18n="svc_shell">Ruwbouw</li>
+          <li data-i18n="svc_excav">Graafwerken</li>
+          <li data-i18n="svc_insul">Isolatie</li>
+          <li data-i18n="svc_handyman">Klussen & herstellingen</li>
+          <li data-i18n="svc_scaffold">Projecten in steigerhout</li>
+        </ul>
       </div>
-      <div class="service-box">
-        <h3>Repairs & Maintenance</h3>
-        <p>We handle all types of construction repairs and long-term maintenance.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 data-i18n="contact_title">Contact</h2>
+        <p class="contact-intro" data-i18n="contact_intro">Vertel ons kort over uw project. We nemen snel contact op.</p>
+        <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+          <div class="grid">
+            <label>
+              <span data-i18n="label_name">Naam</span>
+              <input type="text" name="name" placeholder="" required>
+            </label>
+            <label>
+              <span data-i18n="label_email">E‑mail</span>
+              <input type="email" name="_replyto" placeholder="" required>
+            </label>
+          </div>
+          <label>
+            <span data-i18n="label_message">Bericht</span>
+            <textarea name="message" rows="6" placeholder="" required></textarea>
+          </label>
+          <button type="submit" class="btn" data-i18n="btn_send">Verstuur</button>
+        </form>
+        <div class="alt-contact">
+          <p>
+            <span data-i18n="alt_or">Of mail ons op</span>
+            <a href="mailto:info@d-fix.be">info@d-fix.be</a>
+            · <a href="https://www.facebook.com/DFIXSolutions" target="_blank" rel="noopener">Facebook</a>
+          </p>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> D‑Fix. <span data-i18n="rights">Alle rechten voorbehouden.</span></p>
     </div>
-  </section>
-
-  <section>
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/yourFormID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p style="text-align:center; margin-top:10px;">Or email us at <a href="mailto:info@dfix.com">info@dfix.com</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 D-Fix Construction. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const i18n = {
+      nl: {
+        tagline: "We fix what your husband repaired…",
+        hero_title: "Betrouwbare bouw & renovatie",
+        hero_sub: "Vakwerk, duidelijke planning en nette oplevering — van kleine herstellingen tot volledige projecten.",
+        cta_contact: "Vraag offerte",
+        about_title: "Over ons",
+        about_text: "D‑Fix is een veelzijdig bouwbedrijf. We combineren vakmanschap met heldere communicatie en werken steeds netjes en op tijd. We helpen particulieren en bedrijven met renovaties, afwerking en duurzame herstellingen.",
+        services_title: "Diensten",
+        svc_paint: "Schilderwerken",
+        svc_finish: "Binnenafwerking",
+        svc_drywall: "Gyprocwerken (gipsplaten)",
+        svc_sewer: "Rioleringswerken",
+        svc_floor: "Vloer- & tegelwerken",
+        svc_roof: "Dakwerken",
+        svc_shell: "Ruwbouw",
+        svc_excav: "Graafwerken",
+        svc_insul: "Isolatie",
+        svc_handyman: "Klussen & herstellingen",
+        svc_scaffold: "Projecten in steigerhout",
+        contact_title: "Contact",
+        contact_intro: "Vertel ons kort over uw project. We nemen snel contact op.",
+        label_name: "Naam",
+        label_email: "E‑mail",
+        label_message: "Bericht",
+        btn_send: "Verstuur",
+        alt_or: "Of mail ons op",
+        rights: "Alle rechten voorbehouden."
+      },
+      en: {
+        tagline: "We fix what your husband repaired…",
+        hero_title: "Reliable construction & renovation",
+        hero_sub: "Craftsmanship, clear planning, and tidy delivery — from small repairs to full projects.",
+        cta_contact: "Request a quote",
+        about_title: "About us",
+        about_text: "D‑Fix is a versatile construction company. We combine craftsmanship with clear communication and deliver neat, on‑time work. We help homeowners and businesses with renovations, finishing, and durable repairs.",
+        services_title: "Services",
+        svc_paint: "Painting",
+        svc_finish: "Interior finishing",
+        svc_drywall: "Drywall (gyproc)",
+        svc_sewer: "Sewer works",
+        svc_floor: "Flooring & tiling",
+        svc_roof: "Roofing",
+        svc_shell: "Structural shell",
+        svc_excav: "Excavation",
+        svc_insul: "Insulation",
+        svc_handyman: "Handyman jobs & repairs",
+        svc_scaffold: "Scaffold‑wood projects",
+        contact_title: "Contact",
+        contact_intro: "Tell us a bit about your project. We’ll get back to you quickly.",
+        label_name: "Name",
+        label_email: "Email",
+        label_message: "Message",
+        btn_send: "Send",
+        alt_or: "Or email us at",
+        rights: "All rights reserved."
+      }
+    };
+
+    const buttons = document.querySelectorAll('.lang-btn');
+    const setLang = (lang) => {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key]) el.textContent = i18n[lang][key];
+      });
+      buttons.forEach(b => {
+        const active = b.getAttribute('data-lang') === lang;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+    };
+
+    buttons.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+    setLang('nl');
+  </script>
 </body>
 </html>
