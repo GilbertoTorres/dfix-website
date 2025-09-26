@@ -151,3 +151,12 @@ textarea{resize:vertical;min-height:140px}
 .site-footer .whatsapp {
   margin-left: 6px;
 }
+.site-footer a {
+  color: var(--brand);
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 4px;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
