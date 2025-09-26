@@ -31,6 +31,7 @@ body{
   background:transparent;border:none;color:#fff;font-weight:700;cursor:pointer;padding:6px 8px;border-radius:8px
 }
 .lang-switch .lang-btn.active{background:var(--brand);color:#fff}
+.lang-switch .divider{color:#666}
 
 /* Hero with background image */
 .hero {
@@ -105,58 +106,4 @@ section{padding:48px 0}
 .contact-form{
   background:var(--surface);
   border:1px solid #ddd;
-  padding:20px;
-  border-radius:12px;
-  margin-top:14px;
-}
-.contact-form .grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-}
-@media (max-width:700px){
-  .contact-form .grid{grid-template-columns:1fr}
-}
-label{display:flex;flex-direction:column;gap:8px;font-weight:600}
-input, textarea{
-  padding:12px;
-  border-radius:8px;
-  border:1px solid #ccc;
-  font:inherit;
-}
-textarea{resize:vertical;min-height:140px}
-.alt-contact{margin-top:12px}
-
-/* Footer */
-.site-footer{
-  background:#000;
-  color:var(--brand);
-  padding:18px 0;
-  text-align:center;
-  border-top:4px solid var(--brand);
-}
-.site-footer p{margin:0}
-.site-footer .phone,
-.site-footer .whatsapp {
-  color: var(--brand);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.site-footer .phone:hover,
-.site-footer .whatsapp:hover {
-  text-decoration: underline;
-}
-
-.site-footer .whatsapp {
-  margin-left: 6px;
-}
-.site-footer a {
-  color: var(--brand);
-  font-weight: 700;
-  text-decoration: none;
-  margin: 0 4px;
-}
-.site-footer a:hover {
-  text-decoration: underline;
-}
+  padding:20px
