@@ -107,6 +107,9 @@
     </div>
   </footer>
 
+  <!-- Theme toggle button -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-i18n="theme_toggle">🌙</button>
+
   <script>
     // Year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -144,7 +147,8 @@
         label_phone: "📞 Telefoon:",
         label_whatsapp: "💬 WhatsApp:",
         label_email: "✉️ E-mail:",
-        label_facebook: "👍 Facebook:"
+        label_facebook: "👍 Facebook:",
+        theme_toggle: "Thema wisselen"
       },
       en: {
         tagline: "We fix what your husband repaired…",
@@ -178,7 +182,8 @@
         label_phone: "📞 Phone:",
         label_whatsapp: "💬 WhatsApp:",
         label_email: "✉️ Email:",
-        label_facebook: "👍 Facebook:"
+        label_facebook: "👍 Facebook:",
+        theme_toggle: "Toggle theme"
       },
       fr: {
         tagline: "Nous réparons ce que votre mari a bricolé…",
@@ -212,7 +217,8 @@
         label_phone: "📞 Téléphone:",
         label_whatsapp: "💬 WhatsApp:",
         label_email: "✉️ Email:",
-        label_facebook: "👍 Facebook:"
+        label_facebook: "👍 Facebook:",
+        theme_toggle: "Changer de thème"
       }
     };
 
@@ -239,13 +245,33 @@
         b.classList.toggle('active', active);
         b.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
+
+      // Update theme button label
+      document.getElementById("theme-toggle").setAttribute("aria-label", i18n[lang].theme_toggle);
     };
 
     buttons.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
 
     // Default language NL
     setLang('nl');
+
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const darkMode = document.documentElement.classList.contains('dark');
+      themeBtn.textContent = darkMode ? "☀️" : "🌙";
+      themeBtn.setAttribute("aria-label", i18n[document.documentElement.lang].theme_toggle);
+      localStorage.setItem("theme", darkMode ? "dark" : "light");
+    });
+
+    // Load saved theme
+    if(localStorage.getItem("theme") === "dark"){
+      document.documentElement.classList.add("dark");
+      themeBtn.textContent = "☀️";
+    } else {
+      themeBtn.textContent = "🌙";
+    }
   </script>
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
 </body>
 </html>
